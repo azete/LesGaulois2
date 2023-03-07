@@ -17,6 +17,8 @@ public class Romain {
 		return "Le romain "+ nom + " : ";
 	}
 	public void recevoirCoup(int forceCoup) {
+		assert force>0;
+		int oldforce=force;
 		force-=forceCoup;
 		if (force>0) {
 			parler("Aïe !");
@@ -24,5 +26,10 @@ public class Romain {
 		else {
 			parler("J'abandonne...");
 		}
+		assert oldforce>force;
+	}
+	public static void main(String[] args) {
+		Romain minus=new Romain("Minus",6);
+		minus.recevoirCoup(8);
 	}
 }
