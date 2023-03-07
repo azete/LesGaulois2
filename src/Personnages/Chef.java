@@ -1,4 +1,5 @@
 package Personnages;
+import Construction.Village;
 
 public class Chef {
 	private String nom;
